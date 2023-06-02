@@ -1,0 +1,55 @@
+<h1>Add Project</h1>
+<style>div{display: block;padding: 8px;}</style>
+<div>
+    <form [formGroup]="projectForm" (ngSubmit)="onSubmit(projectForm)">
+        <div>
+            <label for="prname">Project Name:</label>
+            <textarea name="prname" id="prname" cols="60" rows="2" formControlName="projectName"></textarea>
+        </div>
+        <div>
+            <label for="reason">Reason:</label>
+         <select name="reason" id="reason" formControlName="reason">
+            <option value="">--Select--</option>
+            <option value="DelearShip">DelearShip</option>
+            <option value="Buisness">Buisness</option>
+            <option value="Transport">Transport</option>
+         </select>
+        </div>
+        <div>
+            <label for="startDate">Start Date:</label>
+            <input type="date" name="startDate" id="startDate" formControlName="startDate">
+        </div>
+        <div>
+            <label for="endDate">Start Date:</label>
+            <input type="date" name="endDate" id="endDate" formControlName="endDate">
+        </div>
+        <div>
+            <label for="division">Division:</label>
+         <select name="division" id="division" formControlName="division">
+            <option value="">--Select--</option>
+            <option value="Division A">Division A</option>
+            <option value="Division B">Division B</option>
+            <option value="Division C">Division C</option>
+         </select>
+        </div>
+        <div>
+            <label for="department">Department:</label>
+         <select name="department" id="department" formControlName="department">
+            <option value="">--Select--</option>
+            <option value="Quality">Quality</option>
+            <option value="Logistic">Logistic</option>
+            <option value="Maintainence">Maintainence</option>
+         </select>
+        </div>
+        <div>
+            <label for="location">Location:</label>
+         <select name="location" id="location" formControlName="location">
+            <option value="">--Select--</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Pune">Pune</option>
+            <option value="Mumbai">Mumbai</option>
+         </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<div>
+    <button (click)="display(0)"> Project DashBoard</button>
+    <button (click)="display(1)">Add Project </button>
+    <button (click)="display(2)" > Project List</button>
+</div>
+
+<div *ngIf="show==1">
+    <app-add-project></app-add-project>
+</div>
+
+<div *ngIf="show==2">
+    <app-list-project></app-list-project>
+</div>
+
+<div *ngIf="show==0" >
+    <h1>Project DashBoard</h1>    
+    <div class="flex-container">
+        <div class="box">
+            <h3>Total Project</h3>
+            <h4>{{h.totalProject}}</h4>
+        </div>
+        <div class="box">
+            <h3>Register Project</h3>
+            <h4>{{h.registerProject}}</h4>
+        </div>
+        <div class="box">
+            <h3>Running Project</h3>
+            <h4>{{h.runningProjecng}}</h4>
+        </div>
+        <div class="box">
+            <h3>Close Project</h3>
+            <h4>{{h.closProject}}</h4>
+        </div>
+        <div class="box">
+            <h3>Cancelled Project</h3>
+            <h4>{{h.cancelledProject}}</h4>
+        </div>
+    </div>
+    
+</div>
+

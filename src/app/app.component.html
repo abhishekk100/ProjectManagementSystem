@@ -1,0 +1,13 @@
+<div *ngIf="ls!=3">
+    <button (click)="show(0)" [disabled]="ls==0">login</button>
+    <button (click)="show(1)" [disabled]="ls==1">Register</button>
+</div>
+<div *ngIf="ls==0">
+    <app-login></app-login>
+</div>
+<div *ngIf="ls==1">
+    <app-register></app-register>
+</div>
+<div *ngIf="ls==3"> 
+    <app-dash-board> </app-dash-board>
+</div>
